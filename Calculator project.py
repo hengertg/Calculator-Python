@@ -45,7 +45,11 @@ while True:
             return result
         
         if UserNum == "/":
-            result = num1 / num2
+
+            try:
+             result = num1 / num2
+            except ZeroDivisionError:
+                return "You can't divide by 0 because is not possible since it does not have an answer"
             return result
       
             
@@ -55,7 +59,7 @@ while True:
 
 
 
-
+s
 
 
     
