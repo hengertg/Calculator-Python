@@ -13,8 +13,15 @@ while True:
 
      UserNum =input("Type a Symbol ")
 
-    num1=int(input("Type a number: "))
-    num2=int(input("Type your second number: "))
+    try:
+
+            num1=int(input("Type a number: "))
+            num2=int(input("Type your second number: "))
+
+    except NameError:
+            print("Error: Invalid input. Please enter valid numbers.")
+    except ValueError:
+            print("Error: Invalid input. Please enter valid numbers.")
 
 
 
@@ -42,9 +49,11 @@ while True:
                 result = num1 // num2
                 return result
             except ZeroDivisionError:
-                return "Error: Division by zero is not allowed."
+                return "You can't divide by 0 because is not possible since it does not have an answer"
+            except NameError:
+                print("Error: Invalid input. Please enter valid numbers.")
             except ValueError:
-                return "Error: Invalid input. Please enter valid numbers."
+                print("Error: Invalid input. Please enter valid numbers.")
 
         if UserNum == "**":
             result = num1 ** num2
@@ -57,17 +66,10 @@ while True:
              return result
             except ZeroDivisionError:
                 return "You can't divide by 0 because is not possible since it does not have an answer"
+            except NameError:
+                print("Error: Invalid input. Please enter valid numbers.")
             except ValueError:
-                return "Error: Invalid input. Please enter valid numbers."
+                print("Error: Invalid input. Please enter valid numbers.")
       
             
     print(f"The result is: {result()}")
-
-
-
-
-
-s
-
-
-    
