@@ -36,19 +36,28 @@ while True:
             result = num1 % num2
             return result
     
+    
         if UserNum == "//":
-            result = num1 // num2
-            return result
+            try:
+                result = num1 // num2
+                return result
+            except ZeroDivisionError:
+                print("Error: Division by zero is not allowed.")
+            except ValueError:
+                print("Error: Invalid input. Please enter valid numbers.")
     
         if UserNum == "**":
             result = num1 ** num2
             return result
         
         if UserNum == "/":
-            result = num1 / num2
-            return result
-      
-            
+            try:
+                result = num1 / num2
+                return result
+            except ZeroDivisionError:
+                print("Error: Division by zero is not allowed.")
+            except ValueError:
+                print("Error: Invalid input. Please enter valid numbers.")
     print(f"The result is: {result()}")
 
 
