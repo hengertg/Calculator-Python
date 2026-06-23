@@ -42,10 +42,10 @@ while True:
                 result = num1 // num2
                 return result
             except ZeroDivisionError:
-                print("Error: Division by zero is not allowed.")
+                return "Error: Division by zero is not allowed."
             except ValueError:
-                print("Error: Invalid input. Please enter valid numbers.")
-    
+                return "Error: Invalid input. Please enter valid numbers."
+
         if UserNum == "**":
             result = num1 ** num2
             return result
@@ -54,18 +54,13 @@ while True:
 
             try:
              result = num1 / num2
+             return result
             except ZeroDivisionError:
                 return "You can't divide by 0 because is not possible since it does not have an answer"
-            return result
+            except ValueError:
+                return "Error: Invalid input. Please enter valid numbers."
       
             
-            try:
-                result = num1 / num2
-                return result
-            except ZeroDivisionError:
-                print("Error: Division by zero is not allowed.")
-            except ValueError:
-                print("Error: Invalid input. Please enter valid numbers.")
     print(f"The result is: {result()}")
 
 
